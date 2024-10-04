@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whack a Mole Selector</title>
+    <style>
+        body {
+            background-color: #87ceeb;
+            font-family: 'Comic Sans MS', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden; /* Prevent scrolling */
+        }
+
+        .container {
+            text-align: center;
+            margin: 0; /* Remove margin */
+            padding: 0; /* Remove padding */
+        }
+
+        h1 {
+            color: #4b3e2a;
+            text-shadow: 2px 2px #d4af37;
+            margin: 0; /* Remove extra margin */
+        }
+
+        .mole-button {
+            background-color: #8B4513;
+            color: white;
+            font-size: 24px;
+            border: none;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .mole-button:hover {
+            background-color: #A0522D;
+            transform: translateY(-10px);
+        }
+
+        /* Style for the h4 element at the bottom */
+        h4 {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            margin: 0;
+            padding: 10px;
+            background-color: #87ceeb; /* Match the background color */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Choose Your Game!</h1>
+        <button class="mole-button" id="gobido-btn">Gobido</button>
+        <button class="mole-button" id="piu-btn">Piu</button>
+    </div>
+
+    <h4>This is developed by Chole Jaye Pvt Ltd on Request of Shonju Da (Russian dada)</h4>
+
+    <script>
+        // Navigate to the common HTML page, passing the selected option
+        document.getElementById('gobido-btn').addEventListener('click', function() {
+            window.location.href = "common.html?selection=gobido";
+        });
+
+        document.getElementById('piu-btn').addEventListener('click', function() {
+            window.location.href = "common.html?selection=piu";
+        });
+    </script>
+</body>
+</html>
